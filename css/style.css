@@ -1,4 +1,12 @@
-@charset "UTF-8";
+:root {
+  --font-family: "";
+  --font-size: 14px;
+  --main-font-color: #000000;
+  --min-width: 320px;
+  --max-width-container: 67.71vw;
+  --container-padding: 30px;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -14,14 +22,14 @@
 html,
 body {
   height: 100%;
-  min-width: 320px;
+  min-width: var(--min-width);
 }
 
 body {
-  color: #000;
+  color: var(--main-font-color);
   line-height: 1;
-  font-family: "";
-  font-size: 0.875rem;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -32,7 +40,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "";
+  font-family: var(--font-family);
   font-size: inherit;
 }
 
@@ -90,17 +98,11 @@ h6 {
   min-width: 0;
 }
 
-/*
-(i) Стили будут применяться ко 
-всем классам содержащим *__container
-Например header__container, main__container и т.д.
-Снипет (HTML): cnt
-*/
 [class*=__container] {
-  max-width: 73.125rem;
+  max-width: var(--max-width-container);
   box-sizing: content-box;
   margin: 0 auto;
-  padding: 0 0.9375rem;
+  padding: 0 calc(var(--container-padding) / 2);
 }
 
 [class*=-ibg] {
