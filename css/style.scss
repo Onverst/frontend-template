@@ -54,9 +54,6 @@ body {
 // Для подключения/отключения конкретных стилей смотри base.scss
 @import "scss-parts/base";
 
-// Подключение стилей общих элементов проекта
-@import "scss-parts/common";
-
 // Подключение стилей отдельных блоков
 @import "scss-parts/header";
 @import "scss-parts/footer";
